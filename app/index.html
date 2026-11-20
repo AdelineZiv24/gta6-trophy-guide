@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3ea">
+  <title>Leonida Field Guide — GTA VI Trophy Tracker</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+  <header class="site-head">
+    <div class="brand-block">
+      <p class="eyebrow">Unofficial trophy field notes</p>
+      <h1>Leonida Field Guide</h1>
+      <p class="sub-line">Grand Theft Auto VI · PlayStation 5 · 55 trophies · works fully offline</p>
+    </div>
+    <div class="stats-block" aria-label="Trophy progress">
+      <div class="headline-stats">
+        <p><span id="stat-earned">0</span><span class="stat-total"> / 55 earned</span></p>
+        <p><span id="stat-pct">0%</span><span class="stat-total"> to platinum</span></p>
+      </div>
+      <div class="stage-bar" id="stage-bar" role="img" aria-label="Progress by roadmap stage">
+        <div class="stage-segment stage-one" aria-hidden="true"></div>
+        <div class="stage-segment stage-two" aria-hidden="true"></div>
+        <div class="stage-segment stage-three" aria-hidden="true"></div>
+      </div>
+      <div class="tally-line" id="stat-grades" aria-label="Progress by medal grade"></div>
+      <div class="tally-line stage-tallies" id="stat-stages" aria-label="Progress by roadmap stage"></div>
+    </div>
+  </header>
+
+  <div class="audit-strip" id="audit-strip">
+    55 trophies · 1 platinum · 2 gold · 6 silver · 46 bronze · 28 hidden · 1 missable · 0 online · 55/55 guides · 55/55 cited · 5 unconfirmed, flagged honestly · Platinum ≈ 200 hours · difficulty 4/10 · List &amp; counts: Exophase + PSNProfiles · Roadmap &amp; missable: PowerPyx · checked 19 Nov 2026
+  </div>
+
+  <nav class="tabs" id="tabs" aria-label="Guide sections" role="tablist">
+    <button type="button" role="tab" data-view="checklist" aria-selected="true">Checklist</button>
+    <button type="button" role="tab" data-view="roadmap" aria-selected="false">Roadmap to platinum</button>
+    <button type="button" role="tab" data-view="missables" aria-selected="false">Missables &amp; watch-outs</button>
+    <button type="button" role="tab" data-view="next" aria-selected="false">Next up</button>
+    <button type="button" role="tab" data-view="about" aria-selected="false">About &amp; sources</button>
+  </nav>
+
+  <section class="filters" id="filters" aria-label="Filter trophies">
+    <label class="search-control" for="f-search"><span class="control-label">Search</span><input id="f-search" type="search" placeholder="Search trophies…  ( / )"></label>
+    <div class="filter-control"><span class="control-label">Kind</span><div class="kind-chips" id="f-kinds" aria-label="Trophy kinds"></div></div>
+    <label class="filter-control" for="f-grade"><span class="control-label">Grade</span><select id="f-grade"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+    <label class="filter-control" for="f-status"><span class="control-label">Status</span><select id="f-status"><option value="all">Earned + unearned</option><option value="earned">Earned only</option><option value="unearned">Unearned only</option></select></label>
+    <label class="filter-control" for="f-sort"><span class="control-label">Sort</span><select id="f-sort"><option value="roadmap">Roadmap order</option><option value="grade">Grade</option><option value="name">Name</option></select></label>
+    <label class="check-control"><input id="f-hidden" type="checkbox"><span>Hidden only</span></label>
+    <label class="check-control spoiler-control"><input id="f-spoiler" type="checkbox"><span>Spoiler-safe: hide story trophies until earned</span></label>
+    <div class="filter-actions">
+      <button class="button button-primary" id="btn-export" type="button">Export progress</button>
+      <button class="button" id="btn-import" type="button">Import progress</button>
+      <input id="file-import" type="file" accept="application/json" hidden>
+      <button class="button button-quiet" id="btn-reset" type="button">Reset</button>
+    </div>
+    <span id="f-showing" class="showing-count" aria-live="polite"></span>
+  </section>
+
+  <main id="main">
+    <section id="view-checklist" class="view-section" role="tabpanel" aria-label="Trophy checklist">
+      <div class="panes">
+        <div id="trophy-list" aria-live="polite"></div>
+        <aside id="trophy-detail" aria-label="Selected trophy details"></aside>
+      </div>
+    </section>
+    <section id="view-roadmap" class="view-section" hidden aria-label="Roadmap to platinum"></section>
+    <section id="view-missables" class="view-section" hidden aria-label="Missables and watch-outs"></section>
+    <section id="view-next" class="view-section" hidden aria-label="Next trophies"></section>
+    <section id="view-about" class="view-section" hidden aria-label="About and sources"></section>
+  </main>
+
+  <footer>
+    Leonida Field Guide — an unofficial fan guide. Trophy names and descriptions are as PlayStation publishes them; every guide here is written for this app and cites its sources. Progress never leaves this browser.
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

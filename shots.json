@@ -1,0 +1,34 @@
+[
+  {
+    "file": "1-cover.jpg",
+    "view": "checklist",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "2-roadmap.jpg",
+    "view": "roadmap",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "3-missables.jpg",
+    "view": "missables",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "4-planner.jpg",
+    "view": "next",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  }
+]
